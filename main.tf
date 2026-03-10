@@ -1,15 +1,4 @@
-terraform {
-  required_providers {
-    local = {
-      source = "hashicorp/local"
-      version = "~> 2.0"
-    }
-  }
-}
-
-provider "local" {}
-
 resource "local_file" "example_file" {
-  content  = var.file_content
+  content  = "Terraform DevOps Practice"
   filename = var.file_name
 }
